@@ -46,13 +46,15 @@
                 <div class="install-tabs">
                     <button class="install-tab active" data-tab="shell">shell</button>
                     <button class="install-tab" data-tab="powershell">powershell</button>
+                    <button class="install-tab" data-tab="binstall">binstall</button>
                     <button class="install-tab" data-tab="cargo">cargo</button>
+                    <button class="install-tab" data-tab="self-update">self-update</button>
                     <button class="install-tab" data-tab="binary">binary</button>
                 </div>
                 <div class="install-content">
                     <div class="install-pane active" id="shell">
                         <code>curl --proto '=https' --tlsv1.2 -LsSf https://github.com/near/omni-cli-rs/releases/latest/download/omni-cli-rs-installer.sh | sh</code>
-                        <button class="copy-btn" data-copy="curl --proto '=https' --tlsv1.2 -LsSf https://github.com/near/omni-cli-rs/releases/latest/download/omni-cli-rs-installer.sh | sh" aria-label="Copy to clipboard">
+                        <button class="copy-btn" data-copy="curl --proto &#x27;=https&#x27; --tlsv1.2 -LsSf https://github.com/near/omni-cli-rs/releases/latest/download/omni-cli-rs-installer.sh | sh" aria-label="Copy to clipboard">
                             <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
                             <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
                         </button>
@@ -64,6 +66,13 @@
                             <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
                         </button>
                     </div>
+                    <div class="install-pane" id="binstall">
+                        <code>cargo binstall --git https://github.com/near/omni-cli-rs omni-cli-rs</code>
+                        <button class="copy-btn" data-copy="cargo binstall --git https://github.com/near/omni-cli-rs omni-cli-rs" aria-label="Copy to clipboard">
+                            <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        </button>
+                    </div>
                     <div class="install-pane" id="cargo">
                         <code>cargo install --git https://github.com/near/omni-cli-rs</code>
                         <button class="copy-btn" data-copy="cargo install --git https://github.com/near/omni-cli-rs" aria-label="Copy to clipboard">
@@ -71,8 +80,15 @@
                             <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
                         </button>
                     </div>
+                    <div class="install-pane" id="self-update">
+                        <code>omni self-update</code>
+                        <button class="copy-btn" data-copy="omni self-update" aria-label="Copy to clipboard">
+                            <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        </button>
+                    </div>
                     <div class="install-pane" id="binary">
-                        <code># Download a portable binary from GitHub Releases<br>https://github.com/near/omni-cli-rs/releases</code>
+                        <code># Portable archives for macOS, Linux and Windows on the Releases page<br>https://github.com/near/omni-cli-rs/releases/latest</code>
                     </div>
                 </div>
             </div>
